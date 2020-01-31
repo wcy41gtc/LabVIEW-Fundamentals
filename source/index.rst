@@ -17,37 +17,40 @@ This documentation is largely inspired by the amazing work done by my previous c
 Goals
 ^^^^^
 
-1.	Establish an improved understanding on sensors, output signal types, and strategies on how to build adequate and cost-effective data acquisition systems
-2.	Jump start on LabVIEW programming, i.e., build a simple LabVIEW Virtual Instrument (VI) for analog/digital data acquisition, visualization, and recording. Touch the concepts such as producer-consumer architecture and timing control.
-3.	Convey principles and practices on how to test, debug, and maintain the established data acquisition system.
+#. Establish an improved understanding on sensors, output signal types, and strategies on how to build adequate and cost-effective data acquisition systems
+#. Jump start on LabVIEW programming, i.e., build a simple LabVIEW Virtual Instrument (VI) for analog/digital data acquisition, visualization, and recording. Touch the concepts such as producer-consumer architecture and timing control
+#. Convey principles and practices on how to test, debug, and maintain the established data acquisition system
 
 Workshop Structure
 ^^^^^^^^^^^^^^^^^^
 
-1.	Introduction to Data Acquisition
-	1.1.	Data acquisition in geoscientific research
-	1.2.	Typical Transducers and Signal Types
-	1.3.	Data Acquisition Workflow
-2.	Build Customized Data Acquisition Software with LabVIEW
-	2.1.	Introduction to LabVIEW graphical programming
-	2.2.	Analog, digital, and visual image data acquisition modules and utilities.
-	2.3.	Virtual instrument (VI) with a GUI using LabVIEW.
-	2.4.	Format and save the acquired data.
-3.	Advanced Topics
-	3.1.	Projects, sub-VIs and type defs: establish your own LabVIEW library.
-	3.2.	Producer-Consumer architecture.
-	3.3.	Data synchronization.
-	3.4.	Timing control on multi-device data acquisition.
-4.	Test, Debug, and Maintain Data Acquisition Systems
-	4.1.	Common issues and misconducts in laboratory regarding electronics.
-	4.2.	Noise and how to deal with them.
-	4.3.	Debug VIs and hardware.
-	4.4.	Maintain VIs and good practices in laboratory.
+#. Introduction to Data Acquisition
 
+   a. Data acquisition in geoscientific research
+   b. Typical Transducers and Signal Types
+   c. Data Acquisition Workflow
+   
+#. Build Customized Data Acquisition Software with LabVIEW
 
-Contents
-^^^^^^^^
+   a. Introduction to LabVIEW graphical programming
+   b. Analog, digital, and visual image data acquisition modules and utilities
+   c. Virtual instrument (VI) with a GUI using LabVIEW
+   d. Format and save the acquired data
+   
+#. Advanced Topics
 
+   a. Projects, sub-VIs and type defs: establish your own LabVIEW library
+   b. Producer-Consumer architecture
+   c. Data synchronization
+   d. Timing control on multi-device data acquisition
+   
+#. Test, Debug, and Maintain Data Acquisition Systems
+
+   a. Common issues and misconducts in laboratory regarding electronics
+   b. Noise and how to deal with them
+   c. Debug VIs and hardware
+   d. Maintain VIs and good practices in laboratory
+   
 .. toctree::
    :maxdepth: 2
    :caption: Contents:

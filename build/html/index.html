@@ -34,7 +34,8 @@
   <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Common Hardware" href="docs/hardware/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -78,19 +79,20 @@
               
             
             
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">LabVIEW Fundamentals for Geoscientifc Research</a><ul>
-<li><a class="reference internal" href="#welcome-to-the-documentations-for-the-labview-fundamentals">Welcome to the documentations for the LabView Fundamentals!</a></li>
-<li><a class="reference internal" href="#goals">Goals</a></li>
-<li><a class="reference internal" href="#workshop-structure">Workshop Structure</a></li>
-<li><a class="reference internal" href="#contents">Contents</a></li>
-<li><a class="reference internal" href="#contributors">Contributors:</a></li>
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docs/hardware/index.html">Common Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/transducers/index.html">Transducers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html">Analog Signals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html#digital-signals">Digital Signals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html#images">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/workflow/index.html">Data Acquisition Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/labview/index.html">LabVIEW Graphical Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/examplecodes/index.html">Example Codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/advanced_topics/index.html">Advanced Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/resources/index.html">Useful Resources</a></li>
 </ul>
-</li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
-</ul>
-</div>
+
             
           
         </div>
@@ -165,41 +167,82 @@
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Establish an improved understanding on sensors, output signal types, and strategies on how to build adequate and cost-effective data acquisition systems</p></li>
-<li><p>Jump start on LabVIEW programming, i.e., build a simple LabVIEW Virtual Instrument (VI) for analog/digital data acquisition, visualization, and recording. Touch the concepts such as producer-consumer architecture and timing control.</p></li>
-<li><p>Convey principles and practices on how to test, debug, and maintain the established data acquisition system.</p></li>
+<li><p>Jump start on LabVIEW programming, i.e., build a simple LabVIEW Virtual Instrument (VI) for analog/digital data acquisition, visualization, and recording. Touch the concepts such as producer-consumer architecture and timing control</p></li>
+<li><p>Convey principles and practices on how to test, debug, and maintain the established data acquisition system</p></li>
 </ol>
 </div>
 <div class="section" id="workshop-structure">
 <h2>Workshop Structure<a class="headerlink" href="#workshop-structure" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
-<li><p>Introduction to Data Acquisition
-1.1.    Data acquisition in geoscientific research
-1.2.    Typical Transducers and Signal Types
-1.3.    Data Acquisition Workflow</p></li>
-<li><p>Build Customized Data Acquisition Software with LabVIEW
-2.1.    Introduction to LabVIEW graphical programming
-2.2.    Analog, digital, and visual image data acquisition modules and utilities.
-2.3.    Virtual instrument (VI) with a GUI using LabVIEW.
-2.4.    Format and save the acquired data.</p></li>
-<li><p>Advanced Topics
-3.1.    Projects, sub-VIs and type defs: establish your own LabVIEW library.
-3.2.    Producer-Consumer architecture.
-3.3.    Data synchronization.
-3.4.    Timing control on multi-device data acquisition.</p></li>
-<li><p>Test, Debug, and Maintain Data Acquisition Systems
-4.1.    Common issues and misconducts in laboratory regarding electronics.
-4.2.    Noise and how to deal with them.
-4.3.    Debug VIs and hardware.
-4.4.    Maintain VIs and good practices in laboratory.</p></li>
+<li><p>Introduction to Data Acquisition</p>
+<ol class="loweralpha simple">
+<li><p>Data acquisition in geoscientific research</p></li>
+<li><p>Typical Transducers and Signal Types</p></li>
+<li><p>Data Acquisition Workflow</p></li>
 </ol>
-</div>
-<div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+</li>
+<li><p>Build Customized Data Acquisition Software with LabVIEW</p>
+<ol class="loweralpha simple">
+<li><p>Introduction to LabVIEW graphical programming</p></li>
+<li><p>Analog, digital, and visual image data acquisition modules and utilities</p></li>
+<li><p>Virtual instrument (VI) with a GUI using LabVIEW</p></li>
+<li><p>Format and save the acquired data</p></li>
+</ol>
+</li>
+<li><p>Advanced Topics</p>
+<ol class="loweralpha simple">
+<li><p>Projects, sub-VIs and type defs: establish your own LabVIEW library</p></li>
+<li><p>Producer-Consumer architecture</p></li>
+<li><p>Data synchronization</p></li>
+<li><p>Timing control on multi-device data acquisition</p></li>
+</ol>
+</li>
+<li><p>Test, Debug, and Maintain Data Acquisition Systems</p>
+<ol class="loweralpha simple">
+<li><p>Common issues and misconducts in laboratory regarding electronics</p></li>
+<li><p>Noise and how to deal with them</p></li>
+<li><p>Debug VIs and hardware</p></li>
+<li><p>Maintain VIs and good practices in laboratory</p></li>
+</ol>
+</li>
+</ol>
 <div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docs/hardware/index.html">Common Hardware</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/transducers/index.html">Transducers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html">Analog Signals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html#digital-signals">Digital Signals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html#images">Images</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/workflow/index.html">Data Acquisition Workflow</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/labview/index.html">LabVIEW Graphical Programming</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/examplecodes/index.html">Example Codes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/advanced_topics/index.html">Advanced Topics</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docs/resources/index.html">Useful Resources</a><ul class="simple">
+</ul>
+</li>
+</ul>
 </div>
 </div>
 <div class="section" id="contributors">
 <h2>Contributors:<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Chaoyi Wang, (<a class="reference external" href="https://github.com/wcy41gtc">&#64;wcy41gtc</a>)</p></li>
+</ul>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
@@ -216,6 +259,13 @@
            
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docs/hardware/index.html" class="btn btn-neutral float-right" title="Common Hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
   
 
   <hr/>
