@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>LabVIEW Fundamentals Workshop &mdash; labview-fundamentals 0.0.1 documentation</title>
+  <title>LabVIEW Fundamentals for Geoscientifc Research &mdash; labview-fundamentals 0.0.1 documentation</title>
   
 
   
@@ -80,14 +80,12 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">LabVIEW Fundamentals Workshop</a></li>
-<li><a class="reference internal" href="#overview">Overview</a></li>
+<li><a class="reference internal" href="#">LabVIEW Fundamentals for Geoscientifc Research</a><ul>
+<li><a class="reference internal" href="#welcome-to-the-documentations-for-the-labview-fundamentals">Welcome to the documentations for the LabView Fundamentals!</a></li>
 <li><a class="reference internal" href="#goals">Goals</a></li>
-<li><a class="reference internal" href="#structure">Structure</a><ul>
-<li><a class="reference internal" href="#introduction-to-data-acquisition">Introduction to Data Acquisition</a></li>
-<li><a class="reference internal" href="#build-customized-data-acquisition-software-with-labview">Build Customized Data Acquisition Software with LabVIEW</a></li>
-<li><a class="reference internal" href="#test-debug-and-maintain-data-acquisition-systems">Test, Debug, and Maintain Data Acquisition Systems</a></li>
-<li><a class="reference internal" href="#links">Links</a></li>
+<li><a class="reference internal" href="#workshop-structure">Workshop Structure</a></li>
+<li><a class="reference internal" href="#contents">Contents</a></li>
+<li><a class="reference internal" href="#contributors">Contributors:</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
@@ -136,7 +134,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>LabVIEW Fundamentals Workshop</li>
+      <li>LabVIEW Fundamentals for Geoscientifc Research</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -155,55 +153,53 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="labview-fundamentals-workshop">
-<h1>LabVIEW Fundamentals Workshop<a class="headerlink" href="#labview-fundamentals-workshop" title="Permalink to this headline">¶</a></h1>
-</div>
-<div class="section" id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h1>
-<p>Welcome to the documentations for the LabView Fundamentals Workshop!</p>
+  <div class="section" id="labview-fundamentals-for-geoscientifc-research">
+<h1>LabVIEW Fundamentals for Geoscientifc Research<a class="headerlink" href="#labview-fundamentals-for-geoscientifc-research" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="welcome-to-the-documentations-for-the-labview-fundamentals">
+<h2>Welcome to the documentations for the LabView Fundamentals!<a class="headerlink" href="#welcome-to-the-documentations-for-the-labview-fundamentals" title="Permalink to this headline">¶</a></h2>
 <p>Automated data acquisition systems are widely implemented in modern scientific research. A typical data acquisition system consists of sensors, data acquisition devices, and monitoring or recording devices with compatible software. Most sensors today come with proprietary data acquisition software which can be straightforwardly deployed on a personal computer. However, challenges remain if multiple sensors of different types and from different manufacturers need to work synchronously. LabVIEW (developed and maintained by National Instruments) is a popular platform for developing user friendly data acquisition software unionizing signal inputs from various types of sensors. The programming language provides endless customization possibilities to the specific data acquisition needs in terms of quantity, frequency, filtering, and timing, etc. This workshop covers the following topics: 1) Introduction of typical sensors, data types, and data acquisition hardware used in the laboratory; 2) Fundamentals of Labview graphical programming and producer-consumer architecture; 3) How to test, debug, and maintain data acquisition systems</p>
+<p>This short workshop will guide you through the fundamentals of data acquisition systems and basic LabVIEW programming.</p>
+<p>This documentation is largely inspired by the amazing work done by my previous colleague J.R. Leeman, I encourage participants to checkout and contribute to his awesome project <a class="reference external" href="https://tge.readthedocs.io/en/latest/">Technique for Geoscientific Experimentation (TGE)</a>.</p>
 </div>
 <div class="section" id="goals">
-<h1>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h1>
+<h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Establish an improved understanding on sensors, output signal types, and strategies on how to build adequate and cost-effective data acquisition systems</p></li>
 <li><p>Jump start on LabVIEW programming, i.e., build a simple LabVIEW Virtual Instrument (VI) for analog/digital data acquisition, visualization, and recording. Touch the concepts such as producer-consumer architecture and timing control.</p></li>
 <li><p>Convey principles and practices on how to test, debug, and maintain the established data acquisition system.</p></li>
 </ol>
 </div>
-<div class="section" id="structure">
-<h1>Structure<a class="headerlink" href="#structure" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduction-to-data-acquisition">
-<h2>Introduction to Data Acquisition<a class="headerlink" href="#introduction-to-data-acquisition" title="Permalink to this headline">¶</a></h2>
-<p>●       Overview of data acquisition in scientific research
-●       Transducers
-●       Analog vs. Digital Signals
-●       Common Data Acquisition Hardware, drivers, and Software
-●       Data Acquisition Workflow</p>
+<div class="section" id="workshop-structure">
+<h2>Workshop Structure<a class="headerlink" href="#workshop-structure" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Introduction to Data Acquisition
+1.1.    Data acquisition in geoscientific research
+1.2.    Typical Transducers and Signal Types
+1.3.    Data Acquisition Workflow</p></li>
+<li><p>Build Customized Data Acquisition Software with LabVIEW
+2.1.    Introduction to LabVIEW graphical programming
+2.2.    Analog, digital, and visual image data acquisition modules and utilities.
+2.3.    Virtual instrument (VI) with a GUI using LabVIEW.
+2.4.    Format and save the acquired data.</p></li>
+<li><p>Advanced Topics
+3.1.    Projects, sub-VIs and type defs: establish your own LabVIEW library.
+3.2.    Producer-Consumer architecture.
+3.3.    Data synchronization.
+3.4.    Timing control on multi-device data acquisition.</p></li>
+<li><p>Test, Debug, and Maintain Data Acquisition Systems
+4.1.    Common issues and misconducts in laboratory regarding electronics.
+4.2.    Noise and how to deal with them.
+4.3.    Debug VIs and hardware.
+4.4.    Maintain VIs and good practices in laboratory.</p></li>
+</ol>
 </div>
-<div class="section" id="build-customized-data-acquisition-software-with-labview">
-<h2>Build Customized Data Acquisition Software with LabVIEW<a class="headerlink" href="#build-customized-data-acquisition-software-with-labview" title="Permalink to this headline">¶</a></h2>
-<p>●       Introduction to LabVIEW graphical programming
-●       Analog, digital, and visual image data acquisition modules and utilities.
-○       Write a simple virtual instrument (VI) program with a GUI using LabVIEW.
-○       Visualization and real-time monitoring/processing of data.
-○       Format and save the acquired data.
-●       Advanced Topics
-○       Projects, sub-VIs and type defs: establish your own LabVIEW library.
-○       Producer-Consumer architecture.
-○       Data synchronization.
-○       Timing control on multi-device data acquisition.</p>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
 </div>
-<div class="section" id="test-debug-and-maintain-data-acquisition-systems">
-<h2>Test, Debug, and Maintain Data Acquisition Systems<a class="headerlink" href="#test-debug-and-maintain-data-acquisition-systems" title="Permalink to this headline">¶</a></h2>
-<p>●       Common issues and misconducts in laboratory regarding electronics.
-●       Proper precautions on protecting data acquisition systems.
-●       Noise and how to deal with them.
-●       Debug VIs and hardware.
-●       Maintain VIs and good practices in laboratory.</p>
 </div>
-<div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="contributors">
+<h2>Contributors:<a class="headerlink" href="#contributors" title="Permalink to this headline">¶</a></h2>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
