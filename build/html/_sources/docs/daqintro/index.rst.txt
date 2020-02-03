@@ -5,7 +5,7 @@ Data Acquisition Systems
 
 .. figure:: ./images/daq_ni.png
   :align: center
-  :scale: 100%
+  :scale: 75%
 
   `A data acqusition system (Image: NI.com) <http://www.ni.com/data-acquisition/what-is/>`_
 
@@ -54,7 +54,7 @@ Analog signals are continuous and features three primary characteristics:
 
 .. figure:: ./images/analogsig.jpg
   :align: right
-  :scale: 100%
+  :scale: 75%
 
   `Primary characteristics of an analog signal  (Image:ni.com) <https://ni.scene7.com/is/image/ni/clip_image001_20080722134950?scl=1>`_
 
@@ -65,7 +65,7 @@ Digital signals are discrete and features two primary characteristics:
 
 .. figure:: ./images/digitalsig.jpg
   :align: right
-  :scale: 100%
+  :scale: 75%
 
   `Primary characteristics of an digital signal  (Image:ni.com) <https://ni.scene7.com/is/image/ni/021afe6997?scl=1>`_
 
