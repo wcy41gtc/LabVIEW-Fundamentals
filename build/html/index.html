@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Common Hardware" href="docs/hardware/index.html" /> 
+    <link rel="next" title="Data Acquisition Systems" href="docs/daqintro/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -81,11 +81,9 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/hardware/index.html">Common Hardware</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/daqintro/index.html">Data Acquisition Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/transducers/index.html">Transducers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html">Analog Signals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html#digital-signals">Digital Signals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html#images">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html">Signals and Data</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/workflow/index.html">Data Acquisition Workflow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/labview/index.html">LabVIEW Graphical Programming</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs/examplecodes/index.html">Example Codes</a></li>
@@ -159,9 +157,9 @@
 <h1>LabVIEW Fundamentals for Geoscientifc Research<a class="headerlink" href="#labview-fundamentals-for-geoscientifc-research" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="welcome-to-the-documentations-for-the-labview-fundamentals">
 <h2>Welcome to the documentations for the LabView Fundamentals!<a class="headerlink" href="#welcome-to-the-documentations-for-the-labview-fundamentals" title="Permalink to this headline">¶</a></h2>
-<p>Automated data acquisition systems are widely implemented in modern scientific research. A typical data acquisition system consists of sensors, data acquisition devices, and monitoring or recording devices with compatible software. Most sensors today come with proprietary data acquisition software which can be straightforwardly deployed on a personal computer. However, challenges remain if multiple sensors of different types and from different manufacturers need to work synchronously. LabVIEW (developed and maintained by National Instruments) is a popular platform for developing user friendly data acquisition software unionizing signal inputs from various types of sensors. The programming language provides endless customization possibilities to the specific data acquisition needs in terms of quantity, frequency, filtering, and timing, etc. This workshop covers the following topics: 1) Introduction of typical sensors, data types, and data acquisition hardware used in the laboratory; 2) Fundamentals of Labview graphical programming and producer-consumer architecture; 3) How to test, debug, and maintain data acquisition systems</p>
-<p>This short workshop will guide you through the fundamentals of data acquisition systems and basic LabVIEW programming.</p>
-<p>This documentation is largely inspired by the amazing work done by my previous colleague J.R. Leeman, I encourage participants to checkout and contribute to his awesome project <a class="reference external" href="https://tge.readthedocs.io/en/latest/">Technique for Geoscientific Experimentation (TGE)</a>.</p>
+<p>Automated data acquisition systems are widely implemented in modern scientific research. A typical data acquisition system consists of sensors, signal conditioner/converter and driver/software interafeces with computing devices for data transfer and storage.</p>
+<p>Many sensors today come with proprietary data acquisition software which can be straightforwardly deployed on a personal computer. However, challenges remain if multiple sensors of different types and from different manufacturers need to work synchronously. LabVIEW (developed and maintained by National Instruments) is a graphical programming language <code class="docutils literal notranslate"><span class="pre">spaghatti</span> <span class="pre">code</span></code> for developing user friendly data acquisition software unionizing signal inputs from various types of sensors. It provides endless customization possibilities to the specific data acquisition needs in terms of quantity, frequency, filtering, and timing, etc. This workshop covers the following topics: 1) Introduction of typical sensors, signal types, and data acquisition workflow in the laboratory; 2) Fundamentals of Labview graphical programming and some advanced topics; 3) How to test, debug, and maintain data acquisition systems</p>
+<p>This documentation is largely inspired by the amazing work done by a previous colleague J.R. Leeman, I encourage participants to checkout his awesome project <a class="reference external" href="https://tge.readthedocs.io/en/latest/">Technique for Geoscientific Experimentation (TGE)</a>.</p>
 </div>
 <div class="section" id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
@@ -176,48 +174,46 @@
 <ol class="arabic simple">
 <li><p>Introduction to Data Acquisition</p>
 <ol class="loweralpha simple">
-<li><p>Data acquisition in geoscientific research</p></li>
-<li><p>Typical Transducers and Signal Types</p></li>
-<li><p>Data Acquisition Workflow</p></li>
+<li><p>Data acquisition systems.</p></li>
+<li><p>Typical sensors and signals.</p></li>
+<li><p>Data acquisition workflow.</p></li>
 </ol>
 </li>
 <li><p>Build Customized Data Acquisition Software with LabVIEW</p>
 <ol class="loweralpha simple">
-<li><p>Introduction to LabVIEW graphical programming</p></li>
-<li><p>Analog, digital, and visual image data acquisition modules and utilities</p></li>
-<li><p>Virtual instrument (VI) with a GUI using LabVIEW</p></li>
-<li><p>Format and save the acquired data</p></li>
+<li><p>Introduction to LabVIEW graphical programming.</p></li>
+<li><p>Acquire analog, digital, and image data.</p></li>
+<li><p>Format and save the acquired data.</p></li>
 </ol>
 </li>
 <li><p>Advanced Topics</p>
 <ol class="loweralpha simple">
-<li><p>Projects, sub-VIs and type defs: establish your own LabVIEW library</p></li>
-<li><p>Producer-Consumer architecture</p></li>
-<li><p>Data synchronization</p></li>
-<li><p>Timing control on multi-device data acquisition</p></li>
+<li><p>Projects, sub-VIs and type defs: establish your own LabVIEW library.</p></li>
+<li><p>Producer-Consumer architecture.</p></li>
+<li><p>Timing control on multi-device data acquisition.</p></li>
 </ol>
 </li>
 <li><p>Test, Debug, and Maintain Data Acquisition Systems</p>
 <ol class="loweralpha simple">
-<li><p>Common issues and misconducts in laboratory regarding electronics</p></li>
-<li><p>Noise and how to deal with them</p></li>
-<li><p>Debug VIs and hardware</p></li>
-<li><p>Maintain VIs and good practices in laboratory</p></li>
+<li><p>Common issues and misconducts in laboratory regarding electronics.</p></li>
+<li><p>Debug VIs and hardware.</p></li>
+<li><p>Maintain VIs and good practices in laboratory.</p></li>
 </ol>
 </li>
 </ol>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="docs/hardware/index.html">Common Hardware</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="docs/daqintro/index.html">Data Acquisition Systems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docs/daqintro/index.html#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/daqintro/index.html#signal-conversion-conditioning">Signal Conversion/Conditioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docs/daqintro/index.html#driver-software-interfaces">Driver/Software Interfaces</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="docs/transducers/index.html">Transducers</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html">Analog Signals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html#digital-signals">Digital Signals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html#images">Images</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="docs/signals/index.html">Signals and Data</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="docs/workflow/index.html">Data Acquisition Workflow</a><ul class="simple">
@@ -262,7 +258,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="docs/hardware/index.html" class="btn btn-neutral float-right" title="Common Hardware" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="docs/daqintro/index.html" class="btn btn-neutral float-right" title="Data Acquisition Systems" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

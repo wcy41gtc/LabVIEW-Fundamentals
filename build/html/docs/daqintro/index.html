@@ -1,0 +1,304 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Data Acquisition Systems &mdash; labview-fundamentals 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Transducers" href="../transducers/index.html" />
+    <link rel="prev" title="LabVIEW Fundamentals for Geoscientifc Research" href="../../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> labview-fundamentals
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Acquisition Systems</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sensors">Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#signal-conversion-conditioning">Signal Conversion/Conditioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#driver-software-interfaces">Driver/Software Interfaces</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../transducers/index.html">Transducers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../signals/index.html">Signals and Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Data Acquisition Workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../labview/index.html">LabVIEW Graphical Programming</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examplecodes/index.html">Example Codes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced_topics/index.html">Advanced Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/index.html">Useful Resources</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">labview-fundamentals</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Data Acquisition Systems</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/docs/daqintro/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-acquisition-systems">
+<span id="daqintro-index"></span><h1>Data Acquisition Systems<a class="headerlink" href="#data-acquisition-systems" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/daq_ni.png"><img alt="../../_images/daq_ni.png" src="../../_images/daq_ni.png" style="width: 1502.0px; height: 468.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://www.ni.com/data-acquisition/what-is/">A data acqusition system (Image: NI.com)</a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>Data acqusition systems consist of three main components:</p>
+<ol class="arabic simple">
+<li><p>Sensors to measure physical systems.</p></li>
+<li><p>Signal conditioning/conversion.</p></li>
+<li><p>A computing device with interfacing drivers and software for data monitoring/collection.</p></li>
+</ol>
+<div class="section" id="sensors">
+<h2>Sensors<a class="headerlink" href="#sensors" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-right" id="id2">
+<a class="reference internal image-reference" href="../../_images/loadcell.jpg"><img alt="../../_images/loadcell.jpg" src="../../_images/loadcell.jpg" style="width: 196.0px; height: 196.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="http://t0.gstatic.com/images?q=tbn%3AANd9GcSB1OSzneITOKJS24IgPwrPvN3oWgLkV0Zln0aDidu271lG6Ox5wQ61nyRI73_j9KTLfqH1g-G_&amp;usqp=CAc">An S beam load cell  (Image: omega.com)</a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>Sonsors are sometimes called <cite>transducers</cite>, they are devices that covert physical quantities in the real world to electrical signals such voltage, current and resistance, etc. Most sensors needs electric excitaion (DC/AC power supply) and will output either analog or digital signals representing measured physical quantities.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 54%" />
+<col style="width: 46%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head" colspan="2"><p>Common Sensors</p></th>
+</tr>
+<tr class="row-even"><th class="head"><p>Sensors</p></th>
+<th class="head"><p>Phenomenon</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-odd"><td><p>Thermocouple</p></td>
+<td><p>Temperature</p></td>
+</tr>
+<tr class="row-even"><td><p>Photo Sentor</p></td>
+<td><p>Light</p></td>
+</tr>
+<tr class="row-odd"><td><p>Microphone</p></td>
+<td><p>Sound</p></td>
+</tr>
+<tr class="row-even"><td><p>Loadcell</p></td>
+<td><p>Force</p></td>
+</tr>
+<tr class="row-odd"><td><p>Strain gauge</p></td>
+<td><p>Strain</p></td>
+</tr>
+<tr class="row-even"><td><p>Accelerometer</p></td>
+<td><p>Acceleration</p></td>
+</tr>
+<tr class="row-odd"><td><p>Hygrometer</p></td>
+<td><p>Humidity</p></td>
+</tr>
+<tr class="row-even"><td><p>Seismometer</p></td>
+<td><p>Ground motion</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="signal-conversion-conditioning">
+<h2>Signal Conversion/Conditioning<a class="headerlink" href="#signal-conversion-conditioning" title="Permalink to this headline">¶</a></h2>
+<p>Signal conversion and conditioning are the essential components of a data acquisition system. The output signals from the sensors can be catagorized as <strong>Analog</strong> and <strong>Digital</strong>.</p>
+<p>Analog signals are continuous and features three primary characteristics:</p>
+<ol class="arabic simple">
+<li><p>Level (Amplitude)</p></li>
+<li><p>Shape</p></li>
+<li><p>Frequency</p></li>
+</ol>
+<div class="figure align-right" id="id3">
+<a class="reference internal image-reference" href="../../_images/analogsig.jpg"><img alt="../../_images/analogsig.jpg" src="../../_images/analogsig.jpg" style="width: 434.0px; height: 252.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://ni.scene7.com/is/image/ni/clip_image001_20080722134950?scl=1">Primary characteristics of an analog signal  (Image:ni.com)</a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>Digital signals are discrete and features two primary characteristics:</p>
+<ol class="arabic simple">
+<li><p>State</p></li>
+<li><p>Rate</p></li>
+</ol>
+<div class="figure align-right" id="id4">
+<a class="reference internal image-reference" href="../../_images/digitalsig.jpg"><img alt="../../_images/digitalsig.jpg" src="../../_images/digitalsig.jpg" style="width: 447.0px; height: 261.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://ni.scene7.com/is/image/ni/021afe6997?scl=1">Primary characteristics of an digital signal  (Image:ni.com)</a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="driver-software-interfaces">
+<h2>Driver/Software Interfaces<a class="headerlink" href="#driver-software-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>PLace holder</p>
+<p>Contents:</p>
+<div class="toctree-wrapper compound">
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../transducers/index.html" class="btn btn-neutral float-right" title="Transducers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../../index.html" class="btn btn-neutral float-left" title="LabVIEW Fundamentals for Geoscientifc Research" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, Chaoyi Wang
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

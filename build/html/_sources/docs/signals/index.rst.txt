@@ -1,17 +1,7 @@
 .. _signals_index:
 
-Analog Signals
-==============
-
-Placeholder
-
-Digital Signals
-===============
-
-Placeholder
-
-Images
-======
+Signals and Data
+================
 
 Placeholder
 
