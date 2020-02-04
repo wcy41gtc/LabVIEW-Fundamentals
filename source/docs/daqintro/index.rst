@@ -5,7 +5,7 @@ Data Acquisition Systems
 
 .. figure:: ./images/daq_ni.png
   :align: center
-  :scale: 75%
+  :scale: 60%
 
   `A data acqusition system (Image: NI.com) <http://www.ni.com/data-acquisition/what-is/>`_
 
@@ -46,7 +46,12 @@ Signal Conversion/Conditioning
 
 Signal conversion and conditioning are the essential components of a data acquisition system. The output signals from the sensors can be catagorized as **Analog** and **Digital**.
 
-Analog signals are continuous and features three primary characteristics:
+Analog Signal
+^^^^^^^^^^^^^
+
+Analog signals cover a wide range of physical phenomenon. The colors we see, the tones we hear, the temperatures that we feel, etc. There are infinite numbers of such analog signals.
+
+In the perspective of data acquisition, analog signals are continuous and features three primary characteristics:
 
 1. Level (Amplitude)
 2. Shape
@@ -57,6 +62,13 @@ Analog signals are continuous and features three primary characteristics:
   :scale: 75%
 
   `Primary characteristics of an analog signal  (Image:ni.com) <https://ni.scene7.com/is/image/ni/clip_image001_20080722134950?scl=1>`_
+
+Common analog signals include voltage, current, resistance, etc. Analog signals always inherently contain some degree of noise. Therefore, signal conditioning (filtering, amplify, o) is usually needed for raw analog signals. Analog signals also need to be convereted to digital signals for communication and storage in computing devices.
+
+Digital Signal
+^^^^^^^^^^^^^^
+
+Digital signals are finite, with a predefined range, meaning there is a limited values set they can be. How many values in a predefined values set depends on the total number of levels defined in the set. Due to the binary nature of modern computing devices, the number of levels is defined by  2\ :sup:`N`, where the exponent **N** is called ``bit``, the ``bit`` value is widely adopted in the industry for representing the resolution of digital signals.
 
 Digital signals are discrete and features two primary characteristics:
 
