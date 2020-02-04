@@ -58,8 +58,8 @@ In the perspective of data acquisition, analog signals are continuous and featur
 3. Frequency
 
 .. figure:: ./images/analogsig.jpg
-  :align: right
-  :scale: 75%
+  :align: center
+  :scale: 100%
 
   `Primary characteristics of an analog signal  (Image:ni.com) <https://ni.scene7.com/is/image/ni/clip_image001_20080722134950?scl=1>`_
 
@@ -77,16 +77,36 @@ Digital signals are discrete and features two primary characteristics:
 
 .. figure:: ./images/digitalsig.jpg
   :align: right
-  :scale: 75%
+  :scale: 100%
 
   `Primary characteristics of an digital signal  (Image:ni.com) <https://ni.scene7.com/is/image/ni/021afe6997?scl=1>`_
 
-Driver/Software Interfaces
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Digital signals are more resistant to noise, therefore they are widely used for data transmission protocols such as `HDMI` for video and audio, MIDI, I\ :sup:'2'S, and AC`97 for audio. Many instruments for laboratory are developed with proprietary digital commmunication protocols. Keep in mind that not all instrument manufactures are willing to disclose their communication protocol because of intellectual property protection or other reasons. Knowing whether the communication protocol is available for an instrument of interest can be extremely beneficial for future expandability and maintainability.
 
-PLace holder
+Analog to Digital Conversion
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Contents:
+The most common signal types we encounter in the laboraotry are analog. However, analog signals cannot be directly stored in computing devices without being converted in to digital signals. An **analog to digital converter (ADC)** does exactly that. A reverse process of converting digital signals to analog signals can be performed by a **digital to analog converter (DAC)**
+
+.. figure:: ./images/Conversion_AD_DA.png
+  :align: left
+  :scale: 100%
+
+  `Analog to digital conversion (Image:wikipedia) <https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Conversion_AD_DA.png/220px-Conversion_AD_DA.png>`_
+
+.. figure:: ./images/NI9207.jpg
+  :align: right
+  :scale: 55%
+
+  `An ADC Module  (Image:ni.com) <https://m.artisantg.com/itemimages/National_Instruments_NI_9207_View1_2018719152210.jpg>`_
+
+Placeholder
+
+
+Digital Sampling and Nyquist Frequency
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Placeholder
 
 .. toctree::
    :maxdepth: 1
