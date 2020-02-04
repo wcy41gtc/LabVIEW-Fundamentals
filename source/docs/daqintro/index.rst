@@ -63,7 +63,7 @@ In the perspective of data acquisition, analog signals are continuous and featur
 
   `Primary characteristics of an analog signal  (Image:ni.com) <https://ni.scene7.com/is/image/ni/clip_image001_20080722134950?scl=1>`_
 
-Common analog signals include voltage, current, resistance, etc. Analog signals always inherently contain some degree of noise. Therefore, signal conditioning (filtering, amplify, o) is usually needed for raw analog signals. Analog signals also need to be convereted to digital signals for communication and storage in computing devices.
+Common analog signals include voltage, current, resistance, etc. Analog signals always inherently contain some degree of noise. Therefore, signal conditioning is usually needed for raw analog signals. Analog signals also need to be convereted to digital signals for communication and storage in computing devices.
 
 Digital Signal
 ^^^^^^^^^^^^^^
