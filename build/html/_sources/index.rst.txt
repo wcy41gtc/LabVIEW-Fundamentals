@@ -49,12 +49,10 @@ Workshop Structure
    c. Maintain VIs and good practices in laboratory.
    
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Contents:
 
    docs/daqintro/index
-   docs/transducers/index
-   docs/signals/index
    docs/workflow/index
    docs/labview/index
    docs/examplecodes/index
