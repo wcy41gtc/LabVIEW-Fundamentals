@@ -86,27 +86,37 @@ Digital signals are more resistant to noise, therefore they are widely used for 
 Analog to Digital Conversion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The most common signal types we encounter in the laboraotry are analog. However, analog signals cannot be directly stored in computing devices without being converted in to digital signals. An **analog to digital converter (ADC)** does exactly that. A reverse process of converting digital signals to analog signals can be performed by a **digital to analog converter (DAC)**
+The most common signal types we encounter in the laboraotry are analog. However, analog signals cannot be directly stored in computing devices without being converted in to digital signals. An **analog to digital converter (ADC)** does exactly that. An analog to digital converter takes discrete samples from the continuous analog signal with a preset sampling rate (frequency). reverse process of converting digital signals to analog signals can be performed by a **digital to analog converter (DAC)**
 
 .. figure:: ./images/Conversion_AD_DA.png
-  :align: left
+  :align: center
   :scale: 100%
 
   `Analog to digital conversion (Image:wikipedia) <https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Conversion_AD_DA.png/220px-Conversion_AD_DA.png>`_
 
 .. figure:: ./images/NI9207.jpg
-  :align: right
+  :align: center
   :scale: 55%
 
   `An ADC Module  (Image:ni.com) <https://m.artisantg.com/itemimages/National_Instruments_NI_9207_View1_2018719152210.jpg>`_
 
-Placeholder
+Keep in mind that higher ``bit`` resolution of an ADC means steeper price tag. When choosing a ADC, consider a resonable resolution with a acceptable budget.
 
 
 Digital Sampling and Nyquist Frequency
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Placeholder
+Becasue ADCs convert analog signals to digital signals by sampling, the sampling rate has to be much faster than the maximum frequency of the input analog signal in order to get a relatively good conversion. Take a look at the graph below:
+
+.. figure:: ./images/nyquist.png
+  :align: center
+  :scale: 100%
+
+  `Red: input analog signal; Blue: sampled signal. Becasue sampling rate is too low, the converted signal looks nothing like the input signal, the resulting phenomenon is called aliasing (Image: wikipedia) <https://commons.wikimedia.org/wiki/File:AliasingSines.svg>`_
+
+The **Nyquist Sampling Rate** is defined as **two** times the highest frequency of the input signal. The Nyquist sampling rate is the minimum sampling rate required to avoid aliasing. However, in laboratory tests, ADC sampling rate should be at least **ten** times higher than the highest input frequency.
+
+
 
 .. toctree::
    :maxdepth: 1

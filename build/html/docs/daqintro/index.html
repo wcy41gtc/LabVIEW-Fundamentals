@@ -256,20 +256,25 @@
 </div>
 <div class="section" id="analog-to-digital-conversion">
 <h2>Analog to Digital Conversion<a class="headerlink" href="#analog-to-digital-conversion" title="Permalink to this headline">¶</a></h2>
-<p>The most common signal types we encounter in the laboraotry are analog. However, analog signals cannot be directly stored in computing devices without being converted in to digital signals. An <strong>analog to digital converter (ADC)</strong> does exactly that. A reverse process of converting digital signals to analog signals can be performed by a <strong>digital to analog converter (DAC)</strong></p>
-<div class="figure align-left" id="id5">
+<p>The most common signal types we encounter in the laboraotry are analog. However, analog signals cannot be directly stored in computing devices without being converted in to digital signals. An <strong>analog to digital converter (ADC)</strong> does exactly that. An analog to digital converter takes discrete samples from the continuous analog signal with a preset sampling rate (frequency). reverse process of converting digital signals to analog signals can be performed by a <strong>digital to analog converter (DAC)</strong></p>
+<div class="figure align-center" id="id5">
 <a class="reference internal image-reference" href="../../_images/Conversion_AD_DA.png"><img alt="../../_images/Conversion_AD_DA.png" src="../../_images/Conversion_AD_DA.png" style="width: 220.0px; height: 335.0px;" /></a>
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Conversion_AD_DA.png/220px-Conversion_AD_DA.png">Analog to digital conversion (Image:wikipedia)</a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
-<div class="figure align-right" id="id6">
+<div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/NI9207.jpg"><img alt="../../_images/NI9207.jpg" src="../../_images/NI9207.jpg" style="width: 306.35px; height: 330.0px;" /></a>
 <p class="caption"><span class="caption-text"><a class="reference external" href="https://m.artisantg.com/itemimages/National_Instruments_NI_9207_View1_2018719152210.jpg">An ADC Module  (Image:ni.com)</a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
 </div>
-<p>Placeholder</p>
+<p>Keep in mind that higher <code class="docutils literal notranslate"><span class="pre">bit</span></code> resolution of an ADC means steeper price tag. When choosing a ADC, consider a resonable resolution with a acceptable budget.</p>
 </div>
 <div class="section" id="digital-sampling-and-nyquist-frequency">
 <h2>Digital Sampling and Nyquist Frequency<a class="headerlink" href="#digital-sampling-and-nyquist-frequency" title="Permalink to this headline">¶</a></h2>
-<p>Placeholder</p>
+<p>Becasue ADCs convert analog signals to digital signals by sampling, the sampling rate has to be much faster than the maximum frequency of the input analog signal in order to get a relatively good conversion. Take a look at the graph below:</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/nyquist.png"><img alt="../../_images/nyquist.png" src="../../_images/nyquist.png" style="width: 675.0px; height: 225.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://commons.wikimedia.org/wiki/File:AliasingSines.svg">Red: input analog signal; Blue: sampled signal. Becasue sampling rate is too low, the converted signal looks nothing like the input signal, the resulting phenomenon is called aliasing (Image: wikipedia)</a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <strong>Nyquist Sampling Rate</strong> is defined as <strong>two</strong> times the highest frequency of the input signal. The Nyquist sampling rate is the minimum sampling rate required to avoid aliasing. However, in laboratory tests, ADC sampling rate should be at least <strong>ten</strong> times higher than the highest input frequency.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
