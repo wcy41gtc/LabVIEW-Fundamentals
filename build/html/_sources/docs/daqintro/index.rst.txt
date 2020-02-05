@@ -81,7 +81,7 @@ Digital signals are discrete and features two primary characteristics:
 
   `Primary characteristics of an digital signal  (Image:ni.com) <https://ni.scene7.com/is/image/ni/021afe6997?scl=1>`_
 
-Digital signals are more resistant to noise, therefore they are widely used for data transmission protocols such as `HDMI` for video and audio, MIDI, I\ :sup:'2'S, and AC`97 for audio. Many instruments for laboratory are developed with proprietary digital commmunication protocols. Keep in mind that not all instrument manufactures are willing to disclose their communication protocol because of intellectual property protection or other reasons. Knowing whether the communication protocol is available for an instrument of interest can be extremely beneficial for future expandability and maintainability.
+Digital signals are more resistant to noise, therefore they are widely used for data transmission protocols such as `HDMI` for video and audio, MIDI, I\ :sup:`2` S, and AC`97 for audio. Many instruments for laboratory are developed with proprietary digital commmunication protocols. Keep in mind that not all instrument manufactures are willing to disclose their communication protocol because of intellectual property protection or other reasons. Knowing whether the communication protocol is available for an instrument of interest can be extremely beneficial for future expandability and maintainability.
 
 Analog to Digital Conversion
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
