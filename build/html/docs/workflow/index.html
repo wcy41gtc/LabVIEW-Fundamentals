@@ -25,6 +25,7 @@
         <script type="text/javascript" src="../../_static/underscore.js"></script>
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -36,7 +37,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="LabVIEW Graphical Programming" href="../labview/index.html" />
-    <link rel="prev" title="Analog Signals" href="../signals/index.html" /> 
+    <link rel="prev" title="Data Acquisition Systems" href="../daqintro/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -82,12 +83,16 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../hardware/index.html">Common Hardware</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../transducers/index.html">Transducers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../signals/index.html">Analog Signals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../signals/index.html#digital-signals">Digital Signals</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../signals/index.html#images">Images</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Acquisition Workflow</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../daqintro/index.html">Data Acquisition Systems</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data Acquisition Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-axial-strain-of-rock-cylinder">Example: Axial Strain of Rock Cylinder</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#physical-system">Physical System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sensor-strain-gauge">Sensor: Strain Gauge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#signal-conditioning">Signal Conditioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analog-to-digital-conversion">Analog to Digital Conversion</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#monitor-and-record">Monitor and Record</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../labview/index.html">LabVIEW Graphical Programming</a></li>
@@ -160,9 +165,83 @@
             
   <div class="section" id="data-acquisition-workflow">
 <span id="workflow-index"></span><h1>Data Acquisition Workflow<a class="headerlink" href="#data-acquisition-workflow" title="Permalink to this headline">¶</a></h1>
-<p>Placeholder</p>
-<p>Contents:</p>
+<p>A typical data acqusition workflow contains the following steps:</p>
+<ol class="arabic simple">
+<li><p><strong>Physical Syetem</strong>: indentify the physical system/phynomenon.</p></li>
+<li><p><strong>Sensors</strong>: determine the sensor group that is appropriate for measuring the physical system.</p></li>
+<li><p><strong>Signal Conditioning</strong>: Condition the raw analog signal to safe and measurable range, filter noise if necessary.</p></li>
+<li><p><strong>ADC</strong>: Choose an appropriate <cite>analog to digital converter</cite> for converting the conditioned analog signal to digital signal.</p></li>
+<li><p><strong>Computer</strong>: Monitor and record the signal.</p></li>
+</ol>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/daqworkflow.png"><img alt="../../_images/daqworkflow.png" src="../../_images/daqworkflow.png" style="width: 753.9px; height: 113.39999999999999px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://tge.readthedocs.io/en/latest/content/lectures/lecture_7.html">A Typical DAQ Workflow (Ref: J.R. Leeman TGE)</a></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="example-axial-strain-of-rock-cylinder">
+<h2>Example: Axial Strain of Rock Cylinder<a class="headerlink" href="#example-axial-strain-of-rock-cylinder" title="Permalink to this headline">¶</a></h2>
+<p>In this example, we want to measure the axial strain (<span class="math notranslate nohighlight">\(\epsilon\)</span>) of a cylindrical rock specimen during uniaxial compression test.</p>
+<div class="math notranslate nohighlight">
+\[\epsilon=\frac{\Delta L}{L}\]</div>
+<p>where <span class="math notranslate nohighlight">\(\Delta L\)</span> is the change of axial length due to the compression; <span class="math notranslate nohighlight">\(L\)</span> is the initial length of the specimen.</p>
+<p>For more on mechanics and deformation please refer to the <a class="reference external" href="https://en.wikipedia.org/wiki/Deformation_(mechanics)">wiki page about deformation</a></p>
+</div>
+<div class="section" id="physical-system">
+<h2>Physical System<a class="headerlink" href="#physical-system" title="Permalink to this headline">¶</a></h2>
+<p>In a uniaxial compression test, a cylindrical rock specimen is placed vertically inside a loading frame. The load is applied on the axial direction of the rock specimen. An example of the physical system is shown below.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/ucs.png"><img alt="../../_images/ucs.png" src="../../_images/ucs.png" style="width: 597.0px; height: 547.1999999999999px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://m.controls-group.com/eng/products/rock-mechanics-testing-equipment-testing-equipment-testing-equipment/strain-gauges-for-uniaxial-and-triaxial-tests">The Physical System of UCS Test (Image control-group)</a></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="sensor-strain-gauge">
+<h2>Sensor: Strain Gauge<a class="headerlink" href="#sensor-strain-gauge" title="Permalink to this headline">¶</a></h2>
+<p>For a small strain system scenario, a linear strain gauge is usually implemented to measure the axial strain. A strain gauge consists of an insulating flexible backing which supports a metallic foil pattern . A strain gauge is attached to the object by a suitable adhesive. As the object is deformed, the attached strain gauge is deformed as well, causing its electrical resistance to change.
+(<a class="reference external" href="https://en.wikipedia.org/wiki/Strain_gauge">learn more about strain gauge on Wikipedia</a>)</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/straingauge.png"><img alt="../../_images/straingauge.png" src="../../_images/straingauge.png" style="width: 528.6px; height: 498.59999999999997px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/StrainGaugeVisualization.svg/400px-StrainGaugeVisualization.svg.png">The Working Concept of a Linear Strain Gauge (Image Wikipedia)</a></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>In practice, a <a class="reference external" href="https://en.wikipedia.org/wiki/Wheatstone_bridge">Wheatstone Bridge</a> is implemented for measuring the voltage output caused by the resistance change of the strain gauge. In this specific case, the configuration is called <strong>quarter bridge</strong>. A Wheatstone bridge circuit is capable of precisely measuring an unknown electrical resistance change by balancing its two legs.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/quarterbridge.png"><img alt="../../_images/quarterbridge.png" src="../../_images/quarterbridge.png" style="width: 424.8px; height: 308.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.me.psu.edu/cimbala/me345/Lectures/Strain_gages.pdf">The circuit diagram for a quarter Wheatstone bridge (Cimbala, 2013)</a></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>The strain can be approximated by the following equation for quarter bridge configuration,</p>
+<div class="math notranslate nohighlight">
+\[\epsilon \approx 4\frac{V_0}{V_S}\frac{1}{G}\]</div>
+<p>where <span class="math notranslate nohighlight">\(V_0\)</span> is the measured volatge; <span class="math notranslate nohighlight">\(V_S\)</span> is the excitation voltage (supply voltage); <span class="math notranslate nohighlight">\(G\)</span> is the gauge factor determined by the strain gauge manufacturer.</p>
+</div>
+<div class="section" id="signal-conditioning">
+<h2>Signal Conditioning<a class="headerlink" href="#signal-conditioning" title="Permalink to this headline">¶</a></h2>
+<p>Raw analog signals contain some degrees of interference. For example, an AC line nearby may introduce high frequency interference, the periodic temperature change over time can introduce low frequency interference. Signal filters are common signal conditioning tools to block or extract signal components of a certain frequency range.</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/hpf-lpf.png"><img alt="../../_images/hpf-lpf.png" src="../../_images/hpf-lpf.png" style="width: 389.5px; height: 388.5px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.electronics-tutorials.ws/filter/filter_2.html">Passive Low Pass Filter (Image electronics-tutorials)</a>
+<a class="reference external" href="https://www.electronics-tutorials.ws/filter/filter_3.html">Passive High Pass Filter (Image electronics-tutorials)</a></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/sig-hpf-lpf.png"><img alt="../../_images/sig-hpf-lpf.png" src="../../_images/sig-hpf-lpf.png" style="width: 926.4000000000001px; height: 403.20000000000005px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://stackoverflow.com/questions/7105962/how-do-i-run-a-high-pass-or-low-pass-filter-on-data-points-in-r">Green Curve is the original signal, red/blue are filtered signals after low pass filters, black is the filtered signal after a high pass filter (Image stackoverflow)</a></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>Filtering is a very common signal conditioning procedure (<a class="reference external" href="https://www.electronics-tutorials.ws/category/filter">learn more</a>). There are many other signal conditioning techniques, but I will leave this topic open for you to explore.</p>
+</div>
+<div class="section" id="analog-to-digital-conversion">
+<h2>Analog to Digital Conversion<a class="headerlink" href="#analog-to-digital-conversion" title="Permalink to this headline">¶</a></h2>
+<p>After proper signal conditioning, the analog signal is sampled and converted to digital signal by an analog to digital converter (ADC). The following figure shows a resolution difference of a 3-bit and a 16-bit ADC. Note that ADC with higher resolution are increasing more expensive.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/adc-resolution.png"><img alt="../../_images/adc-resolution.png" src="../../_images/adc-resolution.png" style="width: 803.0px; height: 385.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://learn.ni.com/teach/resources/945/adc-and-sampling">3-bit ADC (blue line) versus 16-bit ADC (red line) (Image ni.com)</a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="monitor-and-record">
+<h2>Monitor and Record<a class="headerlink" href="#monitor-and-record" title="Permalink to this headline">¶</a></h2>
+<p>The converted digital signals can be transfered to a computing device such as a laptop to monitor and record. Generally, this procedure is done by a software interface between the DAQ harware and the computer system.</p>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/computer.png"><img alt="../../_images/computer.png" src="../../_images/computer.png" style="width: 866.5px; height: 445.5px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://www.ni.com/en-us/shop/daqexpress.html">Monitor and Record Data (Image ni.com)</a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -177,7 +256,7 @@
         <a href="../labview/index.html" class="btn btn-neutral float-right" title="LabVIEW Graphical Programming" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../signals/index.html" class="btn btn-neutral float-left" title="Analog Signals" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../daqintro/index.html" class="btn btn-neutral float-left" title="Data Acquisition Systems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
