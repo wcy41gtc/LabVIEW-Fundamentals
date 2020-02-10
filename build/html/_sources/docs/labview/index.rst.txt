@@ -5,7 +5,6 @@ LabVIEW Graphical Programming
 
 Placeholder
 
-Contents:
 
 .. toctree::
    :maxdepth: 1
