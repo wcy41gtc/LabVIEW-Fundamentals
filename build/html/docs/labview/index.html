@@ -85,7 +85,11 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../daqintro/index.html">Data Acquisition Systems</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Data Acquisition Workflow</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">LabVIEW Graphical Programming</a><ul class="simple">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">LabVIEW Graphical Programming</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#why-labview">Why LabVIEW?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#labview-virtual-instruments-vi">LabVIEW Virtual Instruments (VI)</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../examplecodes/index.html">Example Codes</a></li>
@@ -157,8 +161,44 @@
             
   <div class="section" id="labview-graphical-programming">
 <span id="labview-index"></span><h1>LabVIEW Graphical Programming<a class="headerlink" href="#labview-graphical-programming" title="Permalink to this headline">¶</a></h1>
-<p>Placeholder</p>
+<a class="reference internal image-reference" href="../../_images/labview-logo.png"><img alt="../../_images/labview-logo.png" class="align-center" src="../../_images/labview-logo.png" style="width: 364.0px; height: 262.5px;" /></a>
+<p>“LabVIEW is systems engineering software for applications that require test, measurement, and control with rapid access to hardware and data insights.” – <a class="reference external" href="https://www.ni.com/en-us/shop/labview.html?cid=Paid_Search-a240Z0000045OsuQAE-Consideration-Labview_exact&amp;s_kwcid=AL!6304!3!377482054773!e!!g!!labview&amp;gclid=Cj0KCQiAm4TyBRDgARIsAOU75sqTRflPyHx7Hhczibb1FNsigmD8U6Re8D6s6KjHnBh3lQLrG0wWjAwaAlUcEALw_wcB">National Instruments</a></p>
+<p><strong>My take</strong>: LabVIEW is a graphical programming platform to integrate sensors, signal conditioner/converter, and computing devices.</p>
+<div class="section" id="why-labview">
+<h2>Why LabVIEW?<a class="headerlink" href="#why-labview" title="Permalink to this headline">¶</a></h2>
+<p>There are many options out there in terms of integrating DAQ systems. However, LabVIEW is the among the most intuitive tools that can be implemeted quickly and effectively. Here are my opinions on the pros of using LabVIEW to integrate DAQ systems in geoscientific experimentation.</p>
+<ol class="arabic simple">
+<li><p>Graphical User Interface (GUI).</p></li>
+<li><p>Easy to implement for controls and automated data acquisition systems.</p></li>
+<li><p>Support for a wide range of sensors and devices.</p></li>
+<li><p>Natural integration with equipment made by National Instruments.</p></li>
+<li><p>Easy distribution and reliability (if built properly).</p></li>
+<li><p>A knowledgeable community (<a class="reference external" href="https://forums.ni.com/t5/LabVIEW/bd-p/170?profile.language=en">NI LabVIEW Forum</a>) with active scientists and engineers solving real life problems using LabVIEW.</p></li>
+</ol>
+</div>
+<div class="section" id="labview-virtual-instruments-vi">
+<h2>LabVIEW Virtual Instruments (VI)<a class="headerlink" href="#labview-virtual-instruments-vi" title="Permalink to this headline">¶</a></h2>
+<p>The programming interface for labview is called a <strong>Virtual Instrument</strong> or as known as a <strong>VI</strong>, this is an analogy for the real instrument panel people used to work with. A blank VI interface is shown as below.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/vi.png"><img alt="../../_images/vi.png" src="../../_images/vi.png" style="width: 758.0px; height: 366.40000000000003px;" /></a>
+<p class="caption"><span class="caption-text"><cite>A blank LabVIEW Virtual Instrument (VI)</cite></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<p>The front panel of a VI hosts components that users interact with, the block diagram hosts the underlying code blocks. In LabVIEW, a code block consists of objects (shown as graphical glyphs or as known as nodes) and wires. Typical LabVIEW objects include:</p>
+<ol class="arabic simple">
+<li><p>Controls</p></li>
+<li><p>Indicators</p></li>
+<li><p>Functions</p></li>
+<li><p>Structures</p></li>
+</ol>
+<p>To learn more on the VI interface and block diagram, please follow these guides: <a class="reference external" href="https://www.ni.com/getting-started/labview-basics/environment">LabVIEW Environment Basics</a> and <a class="reference external" href="https://www.ni.com/en-us/support/documentation/supplemental/08/labview-block-diagram-explained.html">LabVIEW Block Diagram Explained</a></p>
+<p>The  The following figure shows some commonly used controls and corresponding indicators on the front panel and block diagram.</p>
+<p>The programming interface for labview is called a <strong>Virtual Instrument</strong> or as known as a <strong>VI</strong>, this is an analogy for the real instrument panel people used to work with. A blank VI interface is shown as below.</p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/controls-indicators.png"><img alt="../../_images/controls-indicators.png" src="../../_images/controls-indicators.png" style="width: 610.8000000000001px; height: 400.8px;" /></a>
+<p class="caption"><span class="caption-text"><cite>A sample VI shows common controls and indicators</cite></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
