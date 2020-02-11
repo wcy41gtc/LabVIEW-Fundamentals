@@ -1,12 +1,10 @@
 .. _arithmetic_index:
 
-Example Code: LabVIEW Arithmetic
-================================
+Example Code: Arithmetic
+========================
 
 placeholder
 
-Downloads
-^^^^^^^^^
 
 :download:`Arithmetic.vi <Arithmetic.vi>`
 

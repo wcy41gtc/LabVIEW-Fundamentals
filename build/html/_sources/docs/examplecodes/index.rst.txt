@@ -8,7 +8,7 @@ This section conatins some example codes for demonstration purposes.
 Contents:
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    
    ./control_indicator/index
    ./arithmetic/index
