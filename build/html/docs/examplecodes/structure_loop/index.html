@@ -37,7 +37,7 @@
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Example Code: File IO" href="../fileio/index.html" />
-    <link rel="prev" title="Example Code: Arrays. CLusters and Data Bundling" href="../array_cluster/index.html" /> 
+    <link rel="prev" title="Example Code: Arrays. Clusters and Data Bundling" href="../array_cluster/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -89,10 +89,22 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Example Codes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../control_indicator/index.html">Example Code: Controls and Indicators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arithmetic/index.html">Example Code: Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../array_cluster/index.html">Example Code: Arrays. CLusters and Data Bundling</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Example Code: Case Structure</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#example-code-for-loop">Example Code: For Loop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#example-code-while-loop">Example Code: While Loop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../array_cluster/index.html">Example Code: Arrays. Clusters and Data Bundling</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Example Code: Case Structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#behavior">Behavior</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#example-code-for-loop">Example Code: For Loop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">Behavior</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#example-code-while-loop">Example Code: While Loop</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">Behavior</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../fileio/index.html">Example Code: File IO</a></li>
 </ul>
 </li>
@@ -166,18 +178,70 @@
             
   <div class="section" id="example-code-case-structure">
 <span id="structure-loop-index"></span><h1>Example Code: Case Structure<a class="headerlink" href="#example-code-case-structure" title="Permalink to this headline">¶</a></h1>
-<p>placeholder</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example VI demonstrates case structures, including a binary case structure and a multi-state case structure.</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../../_images/case_structure_front_panel.png"><img alt="../../../_images/case_structure_front_panel.png" src="../../../_images/case_structure_front_panel.png" style="width: 420.0px; height: 220.79999999999998px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Front panel of case_structures.vi</cite></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../../_images/case_structure_block_diagram.png"><img alt="../../../_images/case_structure_block_diagram.png" src="../../../_images/case_structure_block_diagram.png" style="width: 546.0px; height: 490.79999999999995px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Block diagram of case_structures.vi</cite></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="behavior">
+<h2>Behavior<a class="headerlink" href="#behavior" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Binary Case Structure</p>
+<p>The case structure should show either “This is The True Case” or “This is The False Case” string depending on the initial boolean input (push button).</p>
+</li>
+<li><p>Multi-state Case Structure</p>
+<p>The case structure should show corresponding string output depending on the initial string in the Enum control.</p>
+</li>
+</ol>
 <p><a class="reference download internal" download="" href="../../../_downloads/72f7eb63f43a987bf385afbcec3902db/case_structures.vi"><code class="xref download docutils literal notranslate"><span class="pre">case_structures.vi</span></code></a></p>
+</div>
 </div>
 <div class="section" id="example-code-for-loop">
 <h1>Example Code: For Loop<a class="headerlink" href="#example-code-for-loop" title="Permalink to this headline">¶</a></h1>
-<p>placeholder</p>
+<div class="section" id="id1">
+<h2>Overview<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>This example VI demonstrates a nested for loop indexing and outputing the elements of a predefined 2-D array.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../../_images/for_loop_front_panel.png"><img alt="../../../_images/for_loop_front_panel.png" src="../../../_images/for_loop_front_panel.png" style="width: 451.2px; height: 242.39999999999998px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Front panel of for_loop.vi</cite></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../../../_images/for_loop_block_diagram.png"><img alt="../../../_images/for_loop_block_diagram.png" src="../../../_images/for_loop_block_diagram.png" style="width: 619.8px; height: 354.59999999999997px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Block diagram of for_loop.vi</cite></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Behavior<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>The “result” indicator should show the elements of the predefined array one by one each second, while the “inner loop #” and the “outer loop #” shows the current number of iterations in the inner and outer for loop. The program should stop after iterating all the elements in the input 2-D array.</p>
 <p><a class="reference download internal" download="" href="../../../_downloads/31339fa90ff757eec6b2fb312e3023e8/for_loop.vi"><code class="xref download docutils literal notranslate"><span class="pre">for_loop.vi</span></code></a></p>
+</div>
 </div>
 <div class="section" id="example-code-while-loop">
 <h1>Example Code: While Loop<a class="headerlink" href="#example-code-while-loop" title="Permalink to this headline">¶</a></h1>
-<p>placeholder</p>
+<div class="section" id="id3">
+<h2>Overview<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+<p>This example VI demonstrates a while loop including a meter and two LEDs (inside and outside loop) that can be controled using the knob and and the push button during execution.</p>
+<div class="figure align-center" id="id9">
+<a class="reference internal image-reference" href="../../../_images/while_loop_front_panel.png"><img alt="../../../_images/while_loop_front_panel.png" src="../../../_images/while_loop_front_panel.png" style="width: 482.4px; height: 332.4px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Front panel of while_loop.vi</cite></span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id10">
+<a class="reference internal image-reference" href="../../../_images/while_loop_block_diagram.png"><img alt="../../../_images/while_loop_block_diagram.png" src="../../../_images/while_loop_block_diagram.png" style="width: 652.1999999999999px; height: 362.4px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Block diagram of while_loop.vi</cite></span><a class="headerlink" href="#id10" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>Behavior<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
+<p>Once excecuted, the program will keep running until the stop button is pushed. The meter indicator can be adjusted by the knob control in real time. LED2 indicator can be turned on and off by the inside loop push button. However, LED1 can only be turned on by the outside loop push button if it is pushed before execution.</p>
 <p><a class="reference download internal" download="" href="../../../_downloads/c6daedabfb15cc51521804bcc0365a3f/while_loop.vi"><code class="xref download docutils literal notranslate"><span class="pre">while_loop.vi</span></code></a></p>
+</div>
 </div>
 
 
@@ -191,7 +255,7 @@
         <a href="../fileio/index.html" class="btn btn-neutral float-right" title="Example Code: File IO" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../array_cluster/index.html" class="btn btn-neutral float-left" title="Example Code: Arrays. CLusters and Data Bundling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="../array_cluster/index.html" class="btn btn-neutral float-left" title="Example Code: Arrays. Clusters and Data Bundling" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

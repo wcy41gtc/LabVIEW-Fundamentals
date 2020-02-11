@@ -89,11 +89,15 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Example Codes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../control_indicator/index.html">Example Code: Controls and Indicators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arithmetic/index.html">Example Code: Arithmetic</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../array_cluster/index.html">Example Code: Arrays. CLusters and Data Bundling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../array_cluster/index.html">Example Code: Arrays. Clusters and Data Bundling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structure_loop/index.html">Example Code: Case Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structure_loop/index.html#example-code-for-loop">Example Code: For Loop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structure_loop/index.html#example-code-while-loop">Example Code: While Loop</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Example Code: File IO</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Example Code: File IO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#behavior">Behavior</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../advanced_topics/index.html">Advanced Topics</a></li>
@@ -166,8 +170,23 @@
             
   <div class="section" id="example-code-file-io">
 <span id="fileio-index"></span><h1>Example Code: File IO<a class="headerlink" href="#example-code-file-io" title="Permalink to this headline">¶</a></h1>
-<p>placeholder</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example VI demonstrates a simple case of file I/O. If executed, the VI opens a new file, names the file, writes data to the file in a format of two columns, and finally saves the file at the specified directory.</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/fileio_front_panel.png"><img alt="../../../_images/fileio_front_panel.png" src="../../../_images/fileio_front_panel.png" style="width: 456.0px; height: 280.8px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Front panel of fileIO.vi</cite></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/fileio_block_diagram.png"><img alt="../../../_images/fileio_block_diagram.png" src="../../../_images/fileio_block_diagram.png" style="width: 700.8px; height: 397.2px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Block diagram of fileIO.vi</cite></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="behavior">
+<h2>Behavior<a class="headerlink" href="#behavior" title="Permalink to this headline">¶</a></h2>
+<p>A file path and file name need to be specified in order to execute the VI. Two random numbers are generated and saved in a format of two columns in the specified frequency. The VI is stopped once the stop button is pressed.</p>
 <p><a class="reference download internal" download="" href="../../../_downloads/cf3e41d96e4f3cd47f987ab3cd2298ef/fileIO.vi"><code class="xref download docutils literal notranslate"><span class="pre">fileIO.vi</span></code></a></p>
+</div>
 </div>
 
 

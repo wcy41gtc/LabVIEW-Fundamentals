@@ -89,7 +89,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Example Codes</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../control_indicator/index.html">Example Code: Controls and Indicators</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arithmetic/index.html">Example Code: Arithmetic</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Example Code: Arrays. Clusters and Data Bundling</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Example Code: Arrays. Clusters and Data Bundling</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#behavior">Behavior</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../structure_loop/index.html">Example Code: Case Structure</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structure_loop/index.html#example-code-for-loop">Example Code: For Loop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../structure_loop/index.html#example-code-while-loop">Example Code: While Loop</a></li>
@@ -166,8 +170,35 @@
             
   <div class="section" id="example-code-arrays-clusters-and-data-bundling">
 <span id="array-cluster-index"></span><h1>Example Code: Arrays. Clusters and Data Bundling<a class="headerlink" href="#example-code-arrays-clusters-and-data-bundling" title="Permalink to this headline">¶</a></h1>
-<p>placeholder</p>
+<div class="section" id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>This example VI demonstrates basics of arrays, clusters, and how to bundle data in a cluster with or without name(label).</p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../../_images/array_cluster_bundle_front_panel.png"><img alt="../../../_images/array_cluster_bundle_front_panel.png" src="../../../_images/array_cluster_bundle_front_panel.png" style="width: 483.59999999999997px; height: 576.0px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Front panel of arrays_clusters_bundles.vi</cite></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/array_cluster_bundle_block_diagram.png"><img alt="../../../_images/array_cluster_bundle_block_diagram.png" src="../../../_images/array_cluster_bundle_block_diagram.png" style="width: 631.1999999999999px; height: 474.59999999999997px;" /></a>
+<p class="caption"><span class="caption-text"><cite>Block diagram of arrays_clusters_bundles.vi</cite></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="behavior">
+<h2>Behavior<a class="headerlink" href="#behavior" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>1-D Array</p>
+<p>If array elements are initialized in the 1-D array control, they are pssed to the 1-D array indicator.</p>
+</li>
+<li><p>2-D Array</p>
+<p>Specify the inital value, rows, and columns, the 2-D array indicator should show the initialized array correspondingly.</p>
+</li>
+<li><p>Extract Array Subset</p>
+<p>Specify the starting index and the range for the row and column in the predefined array, the array indcator should show extracted subset/elemensts.</p>
+</li>
+<li><p>Bundle a numerical value, a boolean value and a string into a cluster without labels.</p></li>
+<li><p>Bundle a numerical value, a boolean value and a string into a cluster with labels, and extract the elements in the cluster by its label.</p></li>
+</ol>
 <p><a class="reference download internal" download="" href="../../../_downloads/6aa5e335fe938ad55a2b61880c41a674/arrays_clusters_bundles.vi"><code class="xref download docutils literal notranslate"><span class="pre">arrays_clusters_bundles.vi</span></code></a></p>
+</div>
 </div>
 
 
