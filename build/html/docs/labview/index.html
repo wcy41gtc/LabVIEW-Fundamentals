@@ -87,7 +87,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../workflow/index.html">Data Acquisition Workflow</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">LabVIEW Graphical Programming</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#why-labview">Why LabVIEW?</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#labview-virtual-instruments-vi">LabVIEW Virtual Instruments (VI)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="#labview-virtual-instruments-vi">LabVIEW Virtual Instruments (VI)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#controls-indicators-and-wires">Controls, Indicators, and Wires</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#arrays-and-clusters">Arrays and Clusters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#loops-and-case-structures">Loops and Case Structures</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#labview-coding-style">LabVIEW Coding Style</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -178,11 +182,13 @@
 </div>
 <div class="section" id="labview-virtual-instruments-vi">
 <h2>LabVIEW Virtual Instruments (VI)<a class="headerlink" href="#labview-virtual-instruments-vi" title="Permalink to this headline">¶</a></h2>
-<p>The programming interface for labview is called a <strong>Virtual Instrument</strong> or as known as a <strong>VI</strong>, this is an analogy for the real instrument panel people used to work with. A blank VI interface is shown as below.</p>
+<p>The programming interface for labview is called a <strong>Virtual Instrument</strong> or as known as a <strong>VI</strong>, which is an analogy for the real instrument panel people used to work with. A blank VI interface and its common functions are shown as below.</p>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/vi.png"><img alt="../../_images/vi.png" src="../../_images/vi.png" style="width: 758.0px; height: 366.40000000000003px;" /></a>
 <p class="caption"><span class="caption-text"><cite>A blank LabVIEW Virtual Instrument (VI)</cite></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
 </div>
+<p>Here are some useful shortcuts for common LabVIEW GUI manipulation.</p>
+<a class="reference internal image-reference" href="../../_images/shortcut.png"><img alt="../../_images/shortcut.png" class="align-center" src="../../_images/shortcut.png" style="width: 640.8000000000001px; height: 418.8px;" /></a>
 <p>The front panel of a VI hosts components that users interact with, the block diagram hosts the underlying code blocks. In LabVIEW, a code block consists of objects (shown as graphical glyphs or as known as nodes) and wires. Typical LabVIEW objects include:</p>
 <ol class="arabic simple">
 <li><p>Controls</p></li>
@@ -191,11 +197,55 @@
 <li><p>Structures</p></li>
 </ol>
 <p>To learn more on the VI interface and block diagram, please follow these guides: <a class="reference external" href="https://www.ni.com/getting-started/labview-basics/environment">LabVIEW Environment Basics</a> and <a class="reference external" href="https://www.ni.com/en-us/support/documentation/supplemental/08/labview-block-diagram-explained.html">LabVIEW Block Diagram Explained</a></p>
-<p>The  The following figure shows some commonly used controls and corresponding indicators on the front panel and block diagram.</p>
-<p>The programming interface for labview is called a <strong>Virtual Instrument</strong> or as known as a <strong>VI</strong>, this is an analogy for the real instrument panel people used to work with. A blank VI interface is shown as below.</p>
+</div>
+<div class="section" id="controls-indicators-and-wires">
+<h2>Controls, Indicators, and Wires<a class="headerlink" href="#controls-indicators-and-wires" title="Permalink to this headline">¶</a></h2>
+<p>The following snapshot of a simple VI shows some commonly used control and corresponding indicator objects on the front panel and block diagram. Each control or indicator object holds data of a certain type, for instance, a numeric control/indicator holds a double precision float number by default. Each control/indicator object in the block diagram features a outline with a distinctive color depending on its data type. The objects in the block digram are connected by so called wires. Data always flow from left to right through the wires in the block diagram.</p>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/controls-indicators.png"><img alt="../../_images/controls-indicators.png" src="../../_images/controls-indicators.png" style="width: 610.8000000000001px; height: 400.8px;" /></a>
-<p class="caption"><span class="caption-text"><cite>A sample VI shows common controls and indicators</cite></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-text"><cite>A simple VI shows common controls and indicators</cite></span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+<p>To learn more about controls, indicators, and wires, please follow this <a class="reference external" href="https://www.labviewmakerhub.com/doku.php?id=learn:tutorials:labview:basics:controls_indicators">guide</a> by <a class="reference external" href="https://www.labviewmakerhub.com/">LabVIEW MakerHub</a>.</p>
+</div>
+<div class="section" id="arrays-and-clusters">
+<h2>Arrays and Clusters<a class="headerlink" href="#arrays-and-clusters" title="Permalink to this headline">¶</a></h2>
+<p>User can define arrays and clusters using LabVIEW. Arrays and clusters can be either controls or an indicators. An array can be multi-dimensional with variable size and contains ordered elements of the same data type. Clusters can contain different data types but the size of a cluster cannot vary once defined. Arrays and clusters cannot hold controls and indicators at the same time. The following VI demonstrates the implementation of arrays and clusters.</p>
+<div class="figure align-center" id="id3">
+<a class="reference internal image-reference" href="../../_images/array-cluster.png"><img alt="../../_images/array-cluster.png" src="../../_images/array-cluster.png" style="width: 558.0px; height: 288.0px;" /></a>
+<p class="caption"><span class="caption-text"><cite>A VI shows the implementation of arrays and clusters</cite></span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
+<p>To learn more about arrays and clusters data structure, please follow the guide: <a class="reference external" href="https://www.ni.com/en-us/support/documentation/supplemental/08/labview-arrays-and-clusters-explained.html">LabVIEW Arrays and Clusters Explained</a></p>
+</div>
+<div class="section" id="loops-and-case-structures">
+<h2>Loops and Case Structures<a class="headerlink" href="#loops-and-case-structures" title="Permalink to this headline">¶</a></h2>
+<p>Loops and case structures are execution structures in LabVIEW.</p>
+<p>A <strong>case structure</strong> contains two or more sub-diagrams of code, only one piece of the code diagram (one case) is visible and can be excecuted at a time.</p>
+<div class="figure align-center" id="id4">
+<a class="reference internal image-reference" href="../../_images/case-structure.png"><img alt="../../_images/case-structure.png" src="../../_images/case-structure.png" style="width: 477.75px; height: 408.75px;" /></a>
+<p class="caption"><span class="caption-text"><cite>An example of Case Structure</cite></span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</div>
+<p>A <strong>for loop</strong> excecute a sub-diagram of code for a set number of iterations.</p>
+<div class="figure align-center" id="id5">
+<a class="reference internal image-reference" href="../../_images/for-loop.png"><img alt="../../_images/for-loop.png" src="../../_images/for-loop.png" style="width: 447.75px; height: 351.0px;" /></a>
+<p class="caption"><span class="caption-text"><cite>An example of For Loop</cite></span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<p>A <strong>while loop</strong> keeps excecuting a sub-diagram of code until a loop stop condition is met.</p>
+<div class="figure align-center" id="id6">
+<a class="reference internal image-reference" href="../../_images/while-loop.png"><img alt="../../_images/while-loop.png" src="../../_images/while-loop.png" style="width: 434.25px; height: 345.0px;" /></a>
+<p class="caption"><span class="caption-text"><cite>An example of While Loop</cite></span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<p>It is important to avoid infinite loop mistakes when using while loops. To learn more about excecution structures, please follow the guide: <a class="reference external" href="https://www.ni.com/getting-started/labview-basics/execution-structures#Case%20Structures">Excecution Structures in LabVIEW</a></p>
+</div>
+<div class="section" id="labview-coding-style">
+<h2>LabVIEW Coding Style<a class="headerlink" href="#labview-coding-style" title="Permalink to this headline">¶</a></h2>
+<p>The <cite>spaghetti code</cite> can get really complicated if not well planned in constructing the block diagram. See the following comparison between two code diagrams, you can get an idea how important it is to plan your code diagram and write clean, readable codes. Writing sub-VIs, bundling data into clusters, constructing codes as state-machines are good practices to make your code looking clean and professional.</p>
+<div class="figure align-center" id="id7">
+<a class="reference internal image-reference" href="../../_images/badcode.png"><img alt="../../_images/badcode.png" src="../../_images/badcode.png" style="width: 881.25px; height: 567.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://forums.ni.com/t5/Random-Ramblings-on-LabVIEW/LabVIEW-Smells-Anti-patterns/ba-p/3480129?profile.language=en">An example of bad LabVIEW coding style (Image: NI forum)</a></span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id8">
+<a class="reference internal image-reference" href="../../_images/goodcode.png"><img alt="../../_images/goodcode.png" src="../../_images/goodcode.png" style="width: 785.0px; height: 468.0px;" /></a>
+<p class="caption"><span class="caption-text"><a class="reference external" href="https://blog.digilentinc.com/tips-for-creating-professional-looking-vis-in-labview/">An example of good LabVIEW coding style (Image: digilentinc.com)</a></span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
 </div>
 <div class="toctree-wrapper compound">
 </div>
