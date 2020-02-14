@@ -88,8 +88,12 @@
 <li class="toctree-l1"><a class="reference internal" href="../examplecodes/index.html">Example Codes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../advanced_topics/index.html">Advanced Topics</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Useful Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ni-daqmx-drivers-installation">NI DAQmx Drivers Installation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#vision-acquisition-drivers-installation">Vision Acquisition Drivers Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#ni-scope-drivers-installation">NI-Scope Drivers Installation</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="#ni-scope-drivers-installation">NI-Scope Drivers Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ni-visa-drivers-installation">NI-VISA Drivers Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ni-488-2-drivers-installation">NI 488.2 Drivers Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ni-serial-drivers-installation">NI Serial Drivers Installation</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -160,8 +164,20 @@
             
   <div class="section" id="useful-resources">
 <span id="resources-index"></span><h1>Useful Resources<a class="headerlink" href="#useful-resources" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ni-daqmx-drivers-installation">
+<h2>NI DAQmx Drivers Installation<a class="headerlink" href="#ni-daqmx-drivers-installation" title="Permalink to this headline">¶</a></h2>
+<p>NI-DAQmx provides support for customers using NI data acquisition and signal conditioning devices.
+NI-DAQmx is an NI instrument driver that controls every aspect of your DAQ system, including signal conditioning, from configuration to programming in LabVIEW to low-level OS and device control. You can build your applications with measurement-specific VIs, functions, data types, and analysis integrations and reliably make faster measurements with optimized DMA data transfer and single-point I/O.</p>
+<p>The following guide shows how to install NI-DAQmx drivers for LabVIEW developing environment.</p>
+<a class="reference internal image-reference" href="../../_images/check_install_daqmx.png"><img alt="../../_images/check_install_daqmx.png" class="align-center" src="../../_images/check_install_daqmx.png" style="width: 770.4px; height: 435.0px;" /></a>
+<p>Check <strong>NI Package Manager</strong> under the <strong>Installed</strong> tab using the search box at the upper-right corner. If no result shows up, you will need to install NI-DAQmx.</p>
+<a class="reference internal image-reference" href="../../_images/search_daqmx.png"><img alt="../../_images/search_daqmx.png" class="align-center" src="../../_images/search_daqmx.png" style="width: 768.6px; height: 435.0px;" /></a>
+<p>Search for <strong>NI-DAQmx</strong> under <strong>Browse Products</strong> tab in the search box. Install <strong>NI-DAQmx</strong> drivers by clicking the <strong>NI-DAQmx</strong> product icon and then click <strong>Install</strong>.</p>
+</div>
 <div class="section" id="vision-acquisition-drivers-installation">
 <h2>Vision Acquisition Drivers Installation<a class="headerlink" href="#vision-acquisition-drivers-installation" title="Permalink to this headline">¶</a></h2>
+<p>Vision Acquisition Software is driver software for acquiring, displaying, and saving images from a wide variety of camera types.
+NI Vision Acquisition Software (VAS) enables you to acquire, display, and save images from a range of industry standard cameras interfaces including GigE Vision, USB3 Vision, and Camera Link. You can also use this software to conveniently control digital I/O on NI vision hardware. With a set of easy-to-use functions and example programs, you can quickly create applications using LabVIEW, LabVIEW NXG, and C/C++.</p>
 <p>The following guide shows how to install vision acquisition drivers (IMAQ) for LabVIEW developing environment.</p>
 <a class="reference internal image-reference" href="../../_images/ni_package_manager_front_panel.png"><img alt="../../_images/ni_package_manager_front_panel.png" class="align-center" src="../../_images/ni_package_manager_front_panel.png" style="width: 771.6px; height: 437.4px;" /></a>
 <p>Search <strong>NI Package Manager</strong> using the Windows search box, and launch the application.</p>
@@ -172,6 +188,8 @@
 </div>
 <div class="section" id="ni-scope-drivers-installation">
 <h2>NI-Scope Drivers Installation<a class="headerlink" href="#ni-scope-drivers-installation" title="Permalink to this headline">¶</a></h2>
+<p>NISCOPE provides support for customers using NI oscilloscope products.
+NISCOPE is an NI instrument driver that enables you to implement multirecord acquisition, continuous acquisition, multiboard synchronization, more than 50 measurement and analysis functions, and the functionality of traditional oscilloscopes. NI-SCOPE is an interchangeable virtual instrument (IVI)–compliant instrument driver, and it features a set of operations and properties that exercise the functionality of the oscilloscope and includes an interactive soft front panel and examples.</p>
 <p>The following guide shows how to install NI-Scope drivers for LabVIEW developing environment. The drivers provides support for LabVIEW to communicate with supported oscilloscopes.</p>
 <a class="reference internal image-reference" href="../../_images/ni_package_manager_front_panel.png"><img alt="../../_images/ni_package_manager_front_panel.png" class="align-center" src="../../_images/ni_package_manager_front_panel.png" style="width: 771.6px; height: 437.4px;" /></a>
 <p>Search <strong>NI Package Manager</strong> using the Windows search box, and launch the application.</p>
@@ -179,6 +197,36 @@
 <p>Once launched, search for <strong>NI-Scope</strong> in the search box located at the upper-right corner of the window,</p>
 <a class="reference internal image-reference" href="../../_images/ni_package_manager_front_panel_niscope_install.png"><img alt="../../_images/ni_package_manager_front_panel_niscope_install.png" class="align-center" src="../../_images/ni_package_manager_front_panel_niscope_install.png" style="width: 767.4px; height: 435.59999999999997px;" /></a>
 <p>Install the <strong>NI-scope</strong> drivers by clicking <strong>Install</strong>.</p>
+</div>
+<div class="section" id="ni-visa-drivers-installation">
+<h2>NI-VISA Drivers Installation<a class="headerlink" href="#ni-visa-drivers-installation" title="Permalink to this headline">¶</a></h2>
+<p>NI-VISA provides support for customers using Ethernet, GPIB, serial, USB, and other types of instruments.
+NI-VISA is an NI instrument driver that is an implementation of the Virtual Instrument Software Architecture (VISA) I/O standard. VISA is a standard for configuring, programming, and troubleshooting instrumentation systems comprising GPIB, VXI, PXI, serial (RS232/RS485), Ethernet/LXI, and/or USB interfaces. NI-VISA includes utilities, low-level control features, and examples to help you create your application.</p>
+<p>The following guide shows how to install NI-VISA drivers for LabVIEW developing environment.</p>
+<a class="reference internal image-reference" href="../../_images/check_install_nivisa.png"><img alt="../../_images/check_install_nivisa.png" class="align-center" src="../../_images/check_install_nivisa.png" style="width: 768.6px; height: 434.4px;" /></a>
+<p>Check <strong>NI Package Manager</strong> under the <strong>installed</strong> tab using the search box at the upper-right corner. If no result shows up, you will need to install NI-VISA.</p>
+<a class="reference internal image-reference" href="../../_images/search_nivisa.png"><img alt="../../_images/search_nivisa.png" class="align-center" src="../../_images/search_nivisa.png" style="width: 769.8px; height: 435.59999999999997px;" /></a>
+<p>Search for <strong>NI-VISA</strong> under <strong>Browse Products</strong> tab in the search box. Install <strong>NI-VISA</strong> drivers by clicking the <strong>NI-VISA</strong> product icon and then click <strong>Install</strong>.</p>
+</div>
+<div class="section" id="ni-488-2-drivers-installation">
+<h2>NI 488.2 Drivers Installation<a class="headerlink" href="#ni-488-2-drivers-installation" title="Permalink to this headline">¶</a></h2>
+<p>NI-488.2 provides support for customers using NI GPIB controllers and NI embedded controllers with GPIB ports.
+NI-488.2 is an NI instrument driver with several utilities that help in developing and debugging an application program. NI-488.2 includes high-level commands that automatically handle all bus management, so you do not have to learn the programming details of the GPIB hardware product or the IEEE 488.2 protocol. Low-level commands are also available for maximum flexibility and performance.</p>
+<p>The following guide shows how to install NI-488.2 drivers for LabVIEW developing environment.</p>
+<a class="reference internal image-reference" href="../../_images/check_install_ni4882.png"><img alt="../../_images/check_install_ni4882.png" class="align-center" src="../../_images/check_install_ni4882.png" style="width: 770.4px; height: 435.59999999999997px;" /></a>
+<p>Check <strong>NI Package Manager</strong> under the <strong>installed</strong> tab using the search box at the upper-right corner. If no result shows up, you will need to install NI-488.2.</p>
+<a class="reference internal image-reference" href="../../_images/search_ni4882.png"><img alt="../../_images/search_ni4882.png" class="align-center" src="../../_images/search_ni4882.png" style="width: 769.8px; height: 435.0px;" /></a>
+<p>Search for <strong>NI 488.2</strong> under <strong>Browse Products</strong> tab in the search box. Install <strong>NI-488.2</strong> drivers by clicking the <strong>NI-488.2</strong> product icon and then click <strong>Install</strong>.</p>
+</div>
+<div class="section" id="ni-serial-drivers-installation">
+<h2>NI Serial Drivers Installation<a class="headerlink" href="#ni-serial-drivers-installation" title="Permalink to this headline">¶</a></h2>
+<p>NI Serial provides support for customers using NI serial products.
+NI-Serial is an NI instrument driver that you can use to maximize CPU utilization and increase data throughput from your instrument without changing the baud rate. You can also perform DMA transfers with larger first-in-first-out memory buffers (FIFOs) to enable NI-Serial interfaces to transmit and receive larger amounts of data at higher rates.</p>
+<p>The following guide shows how to install NI Serial drivers for LabVIEW developing environment.</p>
+<a class="reference internal image-reference" href="../../_images/check_install_niserial.png"><img alt="../../_images/check_install_niserial.png" class="align-center" src="../../_images/check_install_niserial.png" style="width: 769.1999999999999px; height: 434.4px;" /></a>
+<p>Check <strong>NI Package Manager</strong> under the <strong>installed</strong> tab using the search box at the upper-right corner. If no result shows up, you will need to install NI Serial.</p>
+<a class="reference internal image-reference" href="../../_images/search_niserial.png"><img alt="../../_images/search_niserial.png" class="align-center" src="../../_images/search_niserial.png" style="width: 769.1999999999999px; height: 435.59999999999997px;" /></a>
+<p>Search for <strong>NI Serial</strong> under <strong>Browse Products</strong> tab in the search box. Install <strong>NI Serial</strong> drivers by clicking the <strong>NI Serial</strong> product icon and then click <strong>Install</strong>.</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
